@@ -1,0 +1,12 @@
+---
+# tasks file for create-dns
+- name: Create Route53 DNS record
+  route53:
+    command   : create
+    zone      : "{{ dns.zone }}"
+    record    : "{{ dns.record }}"
+    type      : "{{ dns.type }}"
+    ttl       : "{{ dns.ttl }}"
+    value     : "{{ dns.value }}"
+    overwrite : "{{ dns.overwrite }}"
+    wait      : "{{ dns.wait }}"
