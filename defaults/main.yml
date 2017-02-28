@@ -1,0 +1,10 @@
+---
+# defaults file for create-dns
+dns:
+  zone      :
+  record    :
+  type      :
+  ttl       :
+  value     :
+  overwrite :
+  wait      :
