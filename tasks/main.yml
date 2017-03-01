@@ -7,6 +7,6 @@
     record    : "{{ dns.record }}"
     type      : "{{ dns.type }}"
     ttl       : "{{ dns.ttl }}"
-    value     : "{{ dns.value }}"
+    value     : "{{ dns.value | join(',')}}"
     overwrite : "{{ dns.overwrite }}"
     wait      : "{{ dns.wait }}"

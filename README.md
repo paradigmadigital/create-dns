@@ -4,13 +4,13 @@ Create or modify a DNS record in route53
 
 # Role Variables
 
-* `zone`      : The DNS zone to modify
-* `record`    : The full DNS record to create
-* `type`      : The type of DNS record to create (Choices: A, CNAME, MX, AAAA, TXT, PTR, SRV, SPF, NS, SOA)
-* `ttl`       : The TTL to give the new record [Default: 3600 (one hour)]
-* `value`     : The new value when creating a DNS record.  Multiple comma-spaced values are allowed for non-alias records.  When deleting a record all values for the record must be specified or Route53 will not delete it.  [Default: None]
-* `overwrite` : Whether an existing record should be overwritten on create if values do not match [Default: None]
-* `wait`      : Wait until the changes have been replicated to all Amazon Route 53 DNS servers.  [Default: False]
+* `dns.zone`      : The DNS zone to modify
+* `dns.record`    : The full DNS record to create
+* `dns.type`      : The type of DNS record to create (Choices: A, CNAME, MX, AAAA, TXT, PTR, SRV, SPF, NS, SOA)
+* `dns.ttl`       : The TTL to give the new record [Default: 3600 (one hour)]
+* `dns.value`     : The new value when creating a DNS record.  List of values are allowed for non-alias records.  When deleting a record all values for the record must be specified or Route53 will not delete it.  [Default: None]
+* `dns.overwrite` : Whether an existing record should be overwritten on create if values do not match [Default: None]
+* `dns.wait`      : Wait until the changes have been replicated to all Amazon Route 53 DNS servers.  [Default: False]
 
 
 # Example playbook
